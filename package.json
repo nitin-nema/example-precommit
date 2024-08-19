@@ -1,31 +1,25 @@
 {
   "name": "example-precommit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "standard-version"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cz-customizable": "^7.2.1",
     "eslint": "^9.9.0",
     "husky": "^9.1.4",
-    "lint-staged": "^15.2.9"
+    "lint-staged": "^15.2.9",
+    "standard-version": "^9.3.2"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npx lint-staged"
     }
   },
   "lint-staged": {
     "*.js": "eslint --fix"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-customizable"
-    }
   }
 }
