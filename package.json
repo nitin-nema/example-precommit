@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release": "standard-version"
+    "release": "npm test && standard-version && git push origin main --follow-tags "
   },
   "author": "",
   "license": "ISC",
