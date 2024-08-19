@@ -1,0 +1,12 @@
+{
+    "env":{
+        "browser": true,
+        "es2021":true
+    },
+    "extends": "eslint:recommended",
+    "rule":{
+        "eqeqeq":["error","always"],
+        "no-var" :"error",
+        "prefer-const":"error"
+    }
+}

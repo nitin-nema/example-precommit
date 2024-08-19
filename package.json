@@ -1,0 +1,25 @@
+{
+  "name": "example-precommit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.9.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.9"
+  },
+  "husky":{
+    "hooks":{
+      "pre-commit":"lint-staged"
+    }
+  },
+  "lint-staged":{
+    "*.js":"eslint --fix"
+  }
+}
